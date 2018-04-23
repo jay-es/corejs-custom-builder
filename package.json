@@ -1,18 +1,29 @@
 {
   "name": "polyfill",
   "version": "1.0.0",
-  "description": "",
   "main": "webpack.config.js",
   "dependencies": {
-    "core-js": "^2.5.5"
+    "core-js": "2.5.5"
   },
   "devDependencies": {
-    "webpack": "^3.11.0"
+    "webpack": "3.11.0"
   },
   "scripts": {
     "start": "webpack"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jshindo-gladd/polyfill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jshindo-gladd/polyfill/issues"
+  },
+  "homepage": "https://github.com/jshindo-gladd/polyfill#readme",
+  "description": ""
 }
