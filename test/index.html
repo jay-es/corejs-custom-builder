@@ -3,8 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <title>test</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <main id="app" v-cloak>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Before</th>
+          <th>After</th>
+          <th>Same</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(val, key) of after">
+          <td>{{ key }}</td>
+          <td :class="cellClass(before[key])">{{ typeof before[key] }}</td>
+          <td :class="cellClass(after[key])">{{ typeof after[key] }}</td>
+          <td>{{ before[key] === after[key] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
   <script src="./test.js"></script>
   <script>console.time()</script>
   <script src="../dist/polyfill.min.js"></script>

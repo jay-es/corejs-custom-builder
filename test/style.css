@@ -1,0 +1,27 @@
+html {
+  color: #333;
+  font-family: 'Menlo', 'Consolas', monospace;
+}
+
+table, th, td {
+  border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: .25em .5em;
+}
+
+.ok {
+  background-color: #dfd;
+  color: #070;
+}
+
+.ng {
+  background-color: #fee;
+  color: #b00;
+}
+
+[v-cloak] {
+  display: none;
+}
