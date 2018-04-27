@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = Object.entries({
   'core-js/fn/array/find':          'Array.prototype.find',
   'core-js/fn/array/find-index':    'Array.prototype.findIndex',
   'core-js/fn/array/includes':      'Array.prototype.includes',
@@ -12,4 +12,4 @@ module.exports = {
   'core-js/fn/string/ends-with':    'String.prototype.endsWith',
   'core-js/fn/string/pad-start':    'String.prototype.padStart',
   'core-js/fn/string/pad-end':      'String.prototype.padEnd',
-};
+});

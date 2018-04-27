@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "prebuild": "node prebuild",
+    "prebuild": "node prebuild.js",
     "start": "npm run build"
   },
   "keywords": [],
