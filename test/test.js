@@ -9,7 +9,7 @@ setTimeout(function () {
     },
     methods: {
       cellClass: function (val) {
-        return val ? 'ok' : 'ng';
+        return val !== undefined ? 'ok' : 'ng';
       }
     }
   });
