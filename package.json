@@ -1,17 +1,14 @@
 {
   "name": "polyfill",
   "version": "1.0.0",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "dependencies": {
-    "core-js": "2.5.5"
+    "core-js-builder": "2.5.5",
+    "uglify-js": "3.3.23"
   },
-  "devDependencies": {
-    "webpack": "4.6.0",
-    "webpack-cli": "2.0.15"
-  },
+  "devDependencies": {},
   "scripts": {
-    "build": "webpack",
-    "prebuild": "node prebuild.js",
+    "build": "node index.js",
     "start": "npm run build"
   },
   "keywords": [],
@@ -28,5 +25,5 @@
     "url": "https://github.com/jshindo-gladd/polyfill/issues"
   },
   "homepage": "https://github.com/jshindo-gladd/polyfill#readme",
-  "description": ""
+  "description": "core-js Custom Builder"
 }

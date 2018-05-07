@@ -66,7 +66,6 @@ module.exports = {
 
   // ECMAScript 6: Typed Arrays
   'ArrayBuffer':                  'es6.typed.array-buffer',
-  'DataView':                     'es6.typed.data-view',
   'Int8Array':                    'es6.typed.int8-array',
   'Uint8Array':                   'es6.typed.uint8-array',
   'Uint8ClampedArray':            'es6.typed.uint8-clamped-array',
