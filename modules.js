@@ -3,6 +3,9 @@ module.exports = {
   'Object.assign':                'es6.object.assign',
   'Object.is':                    'es6.object.is',
 
+  // ECMAScript 6: Function
+  'Function.prototype.name':      'es6.function.name',
+
   // ECMAScript 6: Array
   'Array.from':                   'es6.array.from',
   'Array.of':                     'es6.array.of',
@@ -23,10 +26,14 @@ module.exports = {
   'String.prototype.endsWith':    'es6.string.ends-with',
   'String.prototype.codePointAt': 'es6.string.code-point-at',
 
+  // ECMAScript 6: RegExp
+  'RegExp.prototype.flags':       'es6.regexp.flags',
+
   // ECMAScript 6: Number
   'Number.isFinite':              'es6.number.is-finite',
   'Number.isNaN':                 'es6.number.is-nan',
   'Number.isInteger':             'es6.number.is-integer',
+  'Number.isSafeInteger':         'es6.number.is-safe-integer',
   'Number.parseFloat':            'es6.number.parse-float',
   'Number.parseInt':              'es6.number.parse-int',
   'Number.EPSILON':               'es6.number.epsilon',
