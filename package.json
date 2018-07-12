@@ -1,5 +1,5 @@
 {
-  "name": "polyfill",
+  "name": "corejs-custom-builder",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
@@ -12,18 +12,18 @@
     "start": "npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jun Shindo",
   "license": "ISC",
   "directories": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jshindo-gladd/polyfill.git"
+    "url": "git+https://github.com/jshindo-gladd/corejs-custom-builder.git"
   },
   "bugs": {
-    "url": "https://github.com/jshindo-gladd/polyfill/issues"
+    "url": "https://github.com/jshindo-gladd/corejs-custom-builder/issues"
   },
-  "homepage": "https://github.com/jshindo-gladd/polyfill#readme",
+  "homepage": "https://github.com/jshindo-gladd/corejs-custom-builder#readme",
   "description": "core-js Custom Builder"
 }
