@@ -12,7 +12,6 @@ module.exports = {
     'no-new': 'off'
   },
   globals: {
-    getMethods: false,
     Vue: false
   }
 }

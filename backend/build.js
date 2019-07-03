@@ -12,7 +12,7 @@ const DIST_DIR = path.resolve('./dist');
 module.exports = modules => {
   if (!fs.existsSync(DIST_DIR)) fs.mkdirSync(DIST_DIR);
 
-  // build
+  // generate 'polyfill.min.js'
   coreJsBuilder({
     modules: Object.values(modules),
     blacklist: [],
@@ -29,19 +29,13 @@ module.exports = modules => {
       console.error(err);
     });
 
-  // get-methods.js
+  // generate 'methodNames.js'
   {
-    const fileName = path.resolve(DIST_DIR, 'get-methods.js');
+    const fileName = path.resolve(DIST_DIR, 'methodNames.js');
     const lines = Object.keys(modules)
-      .map(key => {
-        const val = key
-          .split('.')
-          .map((v, i, a) => `this.${a.slice(0, i + 1).join('.')}`)
-          .join(' && ');
-        return `  '${key}': ${val},`;
-      })
-      .join('\n');
-    const content = `function getMethods() {\n return {\n${lines}\n };\n}`;
+      .map(v => `  '${v}'`)
+      .join(',\n');
+    const content = `var methodNames = [\n${lines}\n];`;
     fs.writeFileSync(fileName, content);
   }
 };
