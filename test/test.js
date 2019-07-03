@@ -1,14 +1,14 @@
 var before = getMethods();
 
-setTimeout(function () {
+setTimeout(function() {
   new Vue({
     el: '#app',
     data: {
       after: getMethods(),
-      before: before,
+      before: before
     },
     methods: {
-      cellClass: function (val) {
+      cellClass: function(val) {
         return val !== undefined ? 'ok' : 'ng';
       }
     }

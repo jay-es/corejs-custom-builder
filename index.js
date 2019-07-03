@@ -5,23 +5,24 @@ const coreJsBuilder = require('core-js-builder');
 const uglifyJs = require('uglify-js');
 
 const modules = require('./modules');
+
 const DIST_DIR = './dist';
 
-fs.existsSync(DIST_DIR) || fs.mkdirSync(DIST_DIR);
+if (!fs.existsSync(DIST_DIR)) fs.mkdirSync(DIST_DIR);
 
 // build
 coreJsBuilder({
   modules: Object.values(modules),
   blacklist: [],
   library: false,
-  umd: false,
+  umd: false
 })
-  .then((code) => {
+  .then(code => {
     const fileName = path.resolve(DIST_DIR, 'polyfill.min.js');
     const result = uglifyJs.minify(code);
     fs.writeFileSync(fileName, result.code);
   })
-  .catch((err) => {
+  .catch(err => {
     console.error(err);
   });
 
@@ -29,9 +30,10 @@ coreJsBuilder({
 {
   const fileName = path.resolve(DIST_DIR, 'get-methods.js');
   const lines = Object.keys(modules)
-    .map((key) => {
-      const val = key.split('.')
-        .map((v, i, a) => 'this.' + a.slice(0, i + 1).join('.'))
+    .map(key => {
+      const val = key
+        .split('.')
+        .map((v, i, a) => `this.${a.slice(0, i + 1).join('.')}`)
         .join(' && ');
       return `  '${key}': ${val},`;
     })
