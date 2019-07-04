@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>test</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main id="app" v-cloak>
+    <ul>
+      <li v-for="(v, k) of allMethods">
+        <label class="chk">
+          <input type="checkbox" v-model="selected" :value="k"/>{{ k }}
+        </label>
+      </li>
+      <li>
+          <button @click="build">Build</button>
+      </li>
+    </ul>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

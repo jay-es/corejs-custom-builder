@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "carlo": "0.9.46",
     "core-js-builder": "2.5.5",
     "uglify-js": "3.3.23"
   },
@@ -15,8 +16,9 @@
     "prettier": "1.18.2"
   },
   "scripts": {
-    "build": "node index.js",
-    "start": "npm run build"
+    "build": "node build.js",
+    "carlo": "node main.js",
+    "start": "npm run carlo"
   },
   "keywords": [],
   "author": "Jun Shindo",
