@@ -1,11 +1,12 @@
 const carlo = require('carlo');
-const findVuejsDevtoolsPath = require('./backend/find-vuejs-devtools-path');
+const findExtPath = require('./backend/find-chrome-extension-path');
 const exposeFunctions = require('./backend/exposeFunctions');
 
 (async () => {
+  const vueDevtoolsPath = findExtPath('nhdogjmejiglipccpnnnanhbledajbpd');
   const chromeOptions = [
     `--window-size=1024,820`,
-    `--disable-extensions-except=${findVuejsDevtoolsPath()}`
+    `--disable-extensions-except=${vueDevtoolsPath}`
   ];
 
   // Launch the browser.

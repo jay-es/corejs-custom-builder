@@ -1,10 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-/** @returns {string} Vue.js devtools Path */
-module.exports = () => {
+/**
+ * @param {string} extensionId
+ * @returns {string} Extension Path
+ */
+module.exports = extensionId => {
   const { LOCALAPPDATA, HOME } = process.env;
-  const paths = ['Default/Extensions/nhdogjmejiglipccpnnnanhbledajbpd'];
+  const paths = ['Default/Extensions', extensionId];
 
   if (LOCALAPPDATA) {
     // Win
