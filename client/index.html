@@ -13,10 +13,14 @@
           <input class="chk" type="checkbox" v-model="selected" :value="k"/>{{ k }}
         </label>
       </li>
+      <li>
+        <button class="btn _default _all" @click="checkAll">Check all</button>
+        <button class="btn _default _all" @click="uncheckAll">Uncheck all</button>
+      </li>
     </ul>
     <div class="center">
-      <button class="btn _primary"@click="build">Build polyfill</button>
-      <button class="btn _default"@click="save">Save settings</button>
+      <button class="btn _primary" @click="build">Build polyfill</button>
+      <button class="btn _default" @click="save">Save settings</button>
     </div>
   </main>
 

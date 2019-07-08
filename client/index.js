@@ -28,6 +28,12 @@ new Vue({
     });
   },
   methods: {
+    checkAll() {
+      this.selected = Object.keys(this.allMethods);
+    },
+    uncheckAll() {
+      this.selected = [];
+    },
     build() {
       window.build(this.targets).then(() => {
         alert('Done'); // eslint-disable-line
