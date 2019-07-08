@@ -4,6 +4,7 @@ const exposeFunctions = require('./backend/exposeFunctions');
 
 (async () => {
   const chromeOptions = [
+    `--window-size=1024,820`,
     `--disable-extensions-except=${findVuejsDevtoolsPath()}`
   ];
 
