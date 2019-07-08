@@ -9,8 +9,8 @@
   <main id="app" v-cloak>
     <ul>
       <li v-for="(v, k) of allMethods">
-        <label class="chk">
-          <input type="checkbox" v-model="selected" :value="k"/>{{ k }}
+        <label class="lbl">
+          <input class="chk" type="checkbox" v-model="selected" :value="k"/>{{ k }}
         </label>
       </li>
     </ul>

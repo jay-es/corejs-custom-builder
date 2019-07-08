@@ -1,3 +1,7 @@
+:root {
+  --main-color: blueviolet;
+}
+
 html {
   padding: 0.5em 1em;
   color: #333;
@@ -10,7 +14,7 @@ ul {
   columns: 3;
 }
 
-label {
+.lbl {
   position: relative;
   display: inline-block;
   margin-bottom: 5px;
@@ -19,12 +23,16 @@ label {
   cursor: pointer;
   user-select: none;
 }
-label::before {
+.lbl:hover {
+  color: var(--main-color);
+}
+
+.lbl::before {
   border: 2px solid #999;
 }
 
-label::before,
-input[type="checkbox"]::before {
+.lbl::before,
+.chk::before {
   content: '';
   position: absolute;
   top: 0;
@@ -34,16 +42,17 @@ input[type="checkbox"]::before {
   width: 1.2em;
   height: 1.2em;
   box-sizing: border-box;
+  pointer-events: none;
 }
 
-input[type="checkbox"] {
+.chk {
   -webkit-appearance: none;
   font-size: 1em;
 }
-input[type="checkbox"]:checked::before {
-  background: blueviolet;
+.chk:checked::before {
+  background: var(--main-color);
 }
-input[type="checkbox"]:checked::after {
+.chk:checked::after {
   content: '';
   position: absolute;
   top: 0.3em;
@@ -59,7 +68,7 @@ input[type="checkbox"]:checked::after {
   margin-top: 0.5em;
   padding: 0.5em 1em;
   outline: none;
-  border: 1px solid blueviolet;
+  border: 1px solid var(--main-color);
   border-radius: 4px;
   font-size: 1em;
   letter-spacing: 0.05em;
@@ -69,12 +78,12 @@ input[type="checkbox"]:checked::after {
   box-shadow: 1px 1px 4px rgba(0,0,0,0.5)
 }
 .btn._primary {
-  background: blueviolet;
+  background: var(--main-color);
   color: #fff;
 }
 .btn._default {
   background: #fff;
-  color: blueviolet;
+  color: var(--main-color);
 }
 
 table, th, td {
