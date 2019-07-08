@@ -13,10 +13,11 @@
           <input type="checkbox" v-model="selected" :value="k"/>{{ k }}
         </label>
       </li>
-      <li>
-          <button @click="build">Build</button>
-      </li>
     </ul>
+    <div class="center">
+      <button class="btn _primary"@click="build">Build polyfill</button>
+      <button class="btn _default"@click="save">Save settings</button>
+    </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>

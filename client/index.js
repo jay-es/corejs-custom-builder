@@ -19,14 +19,22 @@ new Vue({
     }
   },
   created() {
-    window.allMethods().then(res => {
-      this.allMethods = res;
-      this.selected = Object.keys(res);
+    window.getAllMethods().then(allMethods => {
+      this.allMethods = allMethods;
+
+      window.getSelected().then(selected => {
+        this.selected = Object.keys(selected || allMethods);
+      });
     });
   },
   methods: {
     build() {
       window.build(this.targets).then(() => {
+        alert('Done'); // eslint-disable-line
+      });
+    },
+    save() {
+      window.saveFile(this.targets).then(() => {
         alert('Done'); // eslint-disable-line
       });
     }
